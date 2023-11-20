@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthService} from "@auth0/auth0-angular";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'auth0App';
+  constructor(public auth: AuthService) {}
+
+  login(){
+    this.auth.loginWithRedirect();
+  }
+
+  logout(){
+    this.auth.logout();
+  }
 }
