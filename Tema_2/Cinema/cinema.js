@@ -44,4 +44,4 @@ function asientosDisponibles(fila, numeroAsientosXReservar) {
     return disponibles;
 }
 
-console.log("Asientos sugeridos para reserva:", suggest(7));
+console.log("Asientos para reservar:", suggest(7));
